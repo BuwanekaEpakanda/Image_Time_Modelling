@@ -45,7 +45,7 @@ save_path = os.path.join(RESULTS_DIR, "RGB")
 os.makedirs(save_path, exist_ok=True)
 
 # Model configs
-niters = 10000
+niters = 20000
 learning_rate = 0.01  # Learning rate
 decay_rate = 0.01 # Decay rate
 
@@ -407,6 +407,9 @@ test_coords = torch.from_numpy(test_coords).float()
 #print(test_coords.shape, test_coords.device)
 
 test_coords = test_coords.cuda()
+
+TRAIN_INFERECE_DIR = TRAIN_INFERECE_DIR + "//" +f"{weight_path.split('/')[-1][0:-4]}"
+os.makedirs(TRAIN_INFERECE_DIR, exist_ok=True)
 
 for i in range(100):
     index = i
