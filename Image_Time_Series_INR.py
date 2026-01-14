@@ -25,7 +25,7 @@ from fractions import Fraction
 
 #save_dir = "./Results"
 #input_img = "XYT_Sample_Data/img_155_20250629.png"
-IMG_DIR = "XYT_Sample_Data_Part_05"#"XYT_Sample_Data"
+IMG_DIR = "XYT_Sample_Data_Part_02"#"XYT_Sample_Data"
 RESULTS_DIR = IMG_DIR + "_INR_Results"
 
 TRAIN_GRAPH_DIR = os.path.join(RESULTS_DIR, "Training_Graphs")
@@ -45,7 +45,7 @@ save_path = os.path.join(RESULTS_DIR, "RGB")
 os.makedirs(save_path, exist_ok=True)
 
 # Model configs
-niters = 20000
+niters = 10000
 learning_rate = 0.01  # Learning rate
 decay_rate = 0.01 # Decay rate
 
